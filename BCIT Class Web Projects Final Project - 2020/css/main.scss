@@ -3,20 +3,23 @@
     Date: March 28, 2020
 */
 
-/* Import a new font */
+// CSS Reset
+@import url('/students/ssorensen23/css/reset/cssReset.css');
+
+// Import a new font
 @font-face {
     font-family: pigiarniq;
-    src: url('../fonts/pigiarniq_regular-webfont.woff') format('woff'),
-         url('../fonts/pigiarniq_regular-webfont.woff2') format('woff2');
+    src: url('/students/ssorensen23/fonts/pigiarniq_regular-webfont.woff') format('woff'),
+         url('/students/ssorensen23/fonts/pigiarniq_regular-webfont.woff2') format('woff2');
 }
 
 // Variables
 $gunmetal: #2D3047;
 $pansyPurple: #82204A;
 $blackShadows: #C0A9B0;
-$celestialBlue: #449DD1;
+$pinkLace: #F9E5F2;
 $glaucous: #7880B5;
-$laurelGreen: #A9B18F;
+$soap: #D2D6EF;
 $white: #FFFFFF;
 $black: #000000;
 
@@ -27,12 +30,20 @@ body {
     font-family: pigiarniq;
 }
 
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
 // Header
 .header-grid-container {
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
-    background-color: $blackShadows;
+    background-color: $pinkLace;
     border: 2px solid $gunmetal;
     margin-bottom: 10px;
 }
@@ -46,142 +57,170 @@ header figure img {
     height: auto;
 }
 
-// Main Course Selection page
-.selectionSections {
-    background-color: $blackShadows;
+// Flex container to manage nav bar and main content
+.flex-container {
+    display: flex;
+}
+
+// Navigation Bar
+nav {
+    background-color: $pinkLace;
     border: 2px solid $gunmetal;
-    text-align: center;
-    margin: 3% 10% 3% 10%;
-    padding-top: 1%;
+    width: 280px;
+    padding: 10px 5px 10px 5px;
+    position: fixed;
 }
 
-.grid-container-1850 {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-areas: 'twelveWeekEve sixWeek';
+// Navigation Links
+nav ul li {
+    list-style-type: none;
+    padding: 3px 0 3px 0;
 }
 
-.grid-container-1950 {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-areas: 'twelveWeekEve twelveWeekAft sixWeek';
+nav ul{
+    margin-left: -30px;
 }
 
-.selectionSections a {
+nav h2 {
+    margin-left: 10px;
+}
+
+nav a {
     text-decoration: none;
-    padding: 20px 5px 20px 5px;
-    margin-right: 10%;
-    margin-left: 10%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    font-size: 2em;
-    border: 2px solid $gunmetal;
+    display: block;
+    padding: 5px 10px 5px 10px;
 }
 
-.selectionSections a:link, .selectionSections a:visited {
+nav a:link, nav a:visited {
     color: $gunmetal;
 }
 
-.selectionSections a:hover {
+nav a:hover {
+    color: $white;
     background-color: $pansyPurple;
+}
+
+nav a:active {
+    color: $soap;
+}
+
+// Main content
+main {
+    background-color: $pinkLace;
+    border: 2px solid $gunmetal;
+    width: 75%;
+    margin-left: 310px;
+    margin-right: auto;
+    padding: 10px 15px 10px 15px;
+}
+
+main h1 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+main section {
+    padding-left: 20px;
+}
+
+main ul {
+    list-style-type: circle;
+}
+
+main section h2 {
+    border: 2px solid $gunmetal;
+    background-color: $soap;
+    padding: 5px 10px 5px 10px;
+    margin-left: -15px;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main a:link, main a:visited {
+    color: $pansyPurple;
+}
+
+main a:hover {
+    color: $glaucous;
+}
+
+main a:active {
     color: $white;
 }
 
-.selectionSections a:active {
-    background-color: $gunmetal; 
-    color: $white;
-}
+// Media queries for mobile and other electronic devices
+@media screen and (max-width: 871px) {
+    body {
+        font-size: 0.7em;
+    }
 
-.twelveWeekEve {
-    grid-area: twelveWeekEve;
-    background-color: $celestialBlue;
-}
+    nav {
+        width: 200px;
+    }
 
-.twelveWeekAft {
-    grid-area: twelveWeekAft;
-    background-color: $laurelGreen;
-}
-
-.sixWeek {
-    grid-area: sixWeek;
-    background-color: $glaucous;
-}
-
-// Media queries for different screen sizes
-@media screen and (max-width: 856px) {
-    .selectionSections .grid-container-1950 {
-        grid-template-areas: 
-            'twelveWeekEve twelveWeekEve twelveWeekEve'
-            'twelveWeekAft twelveWeekAft twelveWeekAft'
-            'sixWeek sixWeek sixWeek';
+    main {
+        margin-left: 230px;
     }
 }
 
-@media screen and (max-width: 787px) {
-    h1 {
-        font-size: 2em;
+@media screen and (max-width: 670px) {
+    body {
+        font-size: 0.5em;
     }
-    .selectionSections h2 {
-        font-size: 1.5em;
-    }
-    .selectionSections a {
-        font-size: 1em;
-    }
-}
 
-@media screen and (max-width: 576px) {
-    h1 {
-        font-size: 1.4em;
+    nav {
+        width: 150px;
     }
-    .selectionSections h2 {
-        font-size: 1.1em;
+    nav ul {
+        margin-left: -40px;
     }
-    .selectionSections a {
-        font-size: 0.9em;
+
+    header figure img {
+        width: 50px;
+        height: auto;
+    }
+
+    main {
+        margin-left: 180px;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .selectionSections .grid-container-1850 {
-        grid-template-columns: auto;
-        grid-template-areas: 
-            'twelveWeekEve' 
-            'sixWeek';
+    body {
+        font-size: 0.4em;
+    }
+
+    .header-grid-container {
+        margin-left: -50px;
+    }
+
+    nav {
+        width: 120px;
+    }
+
+    main {
+        margin-left: 140px;
     }
 }
+
 
 // Media query for printing
 @media print {
     body {
+        background-color: $white;
         color: $black;
-        font-size: 1em;
+        font-size: 0.8em;
     }
 
-    .selectionSections h2 {
-        font-size: 1.2em;
+    nav {
+        display: none;
     }
 
     .header-grid-container {
-        font-size: 1em;
-        // border: none; 
-    }  
-    
-    .header-grid-container h1 {
-        font-size: 1.5em;
-    }
-    
-    .selectionSections .grid-container-1950 {
-        grid-template-areas: 
-            'twelveWeekEve twelveWeekEve twelveWeekEve'
-            'twelveWeekAft twelveWeekAft twelveWeekAft'
-            'sixWeek sixWeek sixWeek';
-    }
-
-    .selectionSections .grid-container-1850 {
-        grid-template-columns: auto;
-        grid-template-areas: 
-            'twelveWeekEve' 
-            'sixWeek';
+        display: none;
     }
 
     a[href ^= 'http']:after {
@@ -192,5 +231,20 @@ header figure img {
         color: $black;
         font-size: 1em;
         text-decoration: underline;
+    }
+
+    main {
+        border: none;
+        margin-left: 0px;
+        width: 800px;
+    }
+
+    main section h2 {
+        border: none;
+        text-decoration: underline;
+    }
+
+    section {
+        page-break-inside: avoid;
     }
 }

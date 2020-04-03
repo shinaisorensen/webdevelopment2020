@@ -1,44 +1,78 @@
 /*
     Author: Shinai Sorensen
-    Date: March 28, 2020
+    Date: March 30, 2020
 */
-/* Import a new font */
-@font-face {
-  font-family: pigiarniq;
-  src: url("../fonts/pigiarniq_regular-webfont.woff") format("woff"), url("../fonts/pigiarniq_regular-webfont.woff2") format("woff2");
-}
+
+/* Import CSS Reset */
+@import url('/students/ssorensen23/css/reset/cssReset.css');
 
 body {
-  color: #2D3047;
-  background-color: #82204A;
-  font-family: pigiarniq;
+    background-color: #f5c7c7;
 }
 
-.header-grid-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  align-items: center;
-  background-color: #C0A9B0;
-  border: 2px solid #2D3047;
-  margin-bottom: 10px;
+/* Header and navigation */
+header {
+    text-align: center;
+    padding: 10px 0 10px 0;
 }
 
-header figure {
-  text-align: right;
+nav ul li {
+    list-style-type: none;
+    display: inline;
 }
 
-header figure img {
-  width: 100px;
-  height: auto;
+nav a {
+    padding: 0 15px 0 15px;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
-@media print {
-  a[href^='http']:after {
-    content: " (URL: " attr(href) ") ";
-  }
-  a:link, a:visited, a:hover, a:active {
-    color: #000000;
-    font-size: 1em;
-    text-decoration: underline;
-  }
+nav a:link, nav a:visited {
+    color: black;
 }
+
+nav a:hover {
+    color: red;
+}
+
+nav a:active {
+    color: white;
+}
+
+/* Main content */
+.flex-container {
+    display: flex;
+}
+
+.flex-container section:first-of-type {
+    margin-right: 20px;
+}
+
+.flex-container section:first-of-type h2 {
+    text-align: center;
+}
+
+section figure img {
+    width: 200px;
+    height: auto;
+}
+
+figure figcaption {
+    text-align: center;
+}
+
+section {
+    background-color: lightgrey;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+section h2 {
+    padding: 10px 0 20px 0;
+}
+
+section p {
+    text-indent: 45px;
+}
+
+

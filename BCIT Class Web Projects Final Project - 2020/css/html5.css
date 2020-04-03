@@ -1,0 +1,93 @@
+/* 
+    Author: Shinai Sorensen
+    Student Number: A01059813
+    Date: February 26, 2020
+*/
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url('../images/backgrounds/cherryBlossoms.jpeg');
+}
+
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: lime;
+}
+
+a:active {
+    color: white;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: white;
+    text-align: center;
+    padding: 4px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    padding: 30px;
+}
+
+/* Main */
+main {
+    background-color: white;
+    margin-right: 230px;
+    margin-left: 230px;
+    margin-bottom: 100px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+main section {
+    text-align: center;
+}
+
+main section h1 {
+    font-size: 50px;
+}
+
+main section h2 {
+    font-size: 30px;
+}
+
+main section figure img {
+    width: 400px;
+    height: auto;
+    padding: 5px;
+}
+
+.rotatedPicture {
+    padding: 60px;
+    transform: rotate(90deg);
+}
+
+main section ul {
+    list-style-type: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}

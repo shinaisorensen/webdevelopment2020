@@ -1,0 +1,233 @@
+/* 
+    Author: Shinai Sorensen
+    Date: March 9, 2020
+
+    CSS3 feature requirement fulfilled in .flex-container figure {}
+        - Autoprefixer extension was run and no vendor prefixes were required by the extension
+        for the new CSS2 feature
+        - Based on caniuse.com, this feature is not supporter on IE and may or may 
+        not be supported on Opera Mini, UC Browswer for Android, QQ Browser, Baidu
+        Browser and KaiOS Browser
+        - Please use any other browser such as Chrome for best results
+
+    Demonstrated at least 5 CSS3 features talked about in class using the following:
+        - box-shadows
+        - text-shadows
+        - border-radius
+        - background: linear gradient
+        - functions such as attr()
+*/
+
+/* Import the CSS Reset */
+@import url('reset/cssReset.css');
+
+/* Import a new font */
+@font-face {
+    font-family: quicksand_regular;
+    src: url('../fonts/quicksand-regular-webfont.woff') format('woff'),
+         url('../fonts/quicksand-regular-webfont.woff2') format('woff2');
+}
+
+body {
+    font-family: quicksand_regular;
+    color: #11270B;
+    background: linear-gradient(white 1%, #a58372, #886c5e,  #463730 30%);
+}
+
+a:link, a:visited {
+    color: rgb(146, 84, 84);
+}
+
+a:hover {
+    color: blue;
+}
+
+a:active {
+    color: red;
+}
+
+/* Header */
+header {
+    background-color: #C5C5C5;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;  
+    margin-right: 3%;
+}
+nav ul li a {
+    text-decoration: none;
+}
+
+nav ul li a:link, nav ul li a:visited {
+    color: #11270B;
+}
+
+nav ul li a:hover {
+    color: brown;
+}
+
+nav ul li a:active {
+    color: white;
+}
+
+/* Body */
+
+/* Title of page and introduction image */
+#titleIntro {
+    text-align: center;
+}
+
+#titleIntro figure img {
+    width: 70%;
+    height: auto;
+    box-shadow: 5px 5px 10px black;   
+}
+
+#titleIntro h1 {
+    background-color: #C5C5C5;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px black;
+    text-shadow: 1px 1px 2px black;
+}
+
+/* Main Content */
+
+main {
+    text-align: center;
+    background-color: #C5C5C5;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    padding: 1% 3% 1% 3%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px black;
+}
+
+section h2 {
+    text-shadow: 1px 1px 2px black;
+}
+
+section p {
+    text-align: left;
+    text-indent: 45px;
+}
+
+.flex-container {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+
+/* New CSS3 feature */
+.flex-container figure {
+    padding: 0.5%;
+
+    /* 
+        Requirement fulfilled here using outline-style: auto;
+
+        Creates an automatically styled border around each image
+    */
+    outline-style: auto;
+}
+
+.flex-container img {
+    width: auto;
+    height: 200px;
+}
+
+/* Footer */
+footer {
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #C5C5C5;
+    color: #11270B;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px black;
+    text-shadow: 1px 1px 2px black;
+}
+
+/* The following media queries are to help ensure that the layout is well-sized on every type of device */
+@media screen and (min-width: 899px) and (max-width: 1143px) {
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.5em; }
+}
+
+@media screen and (max-width: 958px) {
+    .flex-container img { height: 150px; }
+}
+
+@media screen and (min-width: 814px) and (max-width: 898px) {
+    body { font-size: 0.9em; }
+    h1 { font-size: 2.3em; }
+    h2 { font-size: 1.8em; }
+}
+
+/* The media query will ensure that the nav bar only displays the link to the home page */
+@media screen and (max-width: 813px) {
+    body { font-size: 0.9em; }
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.3em; }
+    nav ul li:not(:first-child) { display: none; }
+}
+
+/* This media query will help the images look better depending on the size of the screen */
+@media screen and (max-width: 780px) {
+    .flex-container img { height: 130px;}
+    .flex-container { flex-wrap: wrap; }
+    footer { font-size: 0.7em; }
+}
+
+@media screen and (max-width: 625px) {
+    h1 { font-size: 1.5em; }
+    h2 { font-size: 1.1em; }
+}
+
+@media screen and (max-width: 524px) {
+    h1 { font-size: 1.1em; }
+}
+
+/* Style the page for printers */
+@media print {
+    /* Make text black for black and white or colour printing */
+    /* Style content so that it takes up more of the printer page */
+    body { color: black; width: 1300px; padding: 0; margin-left: -100px; }
+
+    /* Display URLs beside links so the user can easily identify them */
+    a[href^='http']:after { content: ' (URL: ' attr(href) ') '; }
+
+    /* Don't display the header, navigation bar or introductory figure at the top of the page */
+    header, nav, #titleIntro figure { display: none; }
+
+    /* Ensure the font size is large enough to read */
+    main p { font-size: 1.3em; }
+
+    /* Distinguish links on printer page */
+    a:link, a:visited { color: black; font-weight: bold; }
+
+    /* No page breaks can occur within sections, ensures that any new page will start with a new section if needed */
+    section { page-break-inside: avoid; }
+
+    /* Gets rid of the shadows so text is plain */
+    #titleIntro figure img, #titleIntro h1, section h2, main, footer { box-shadow: none; text-shadow: none; }
+}
