@@ -1,0 +1,150 @@
+/* 
+    Author: Shinai Sorensen
+    Date: March 4, 2020
+*/
+
+/* The CSS Reset */
+@import url('reset/cssReset.css');
+
+/* Import new font */
+@font-face {
+    font-family: quicksand_regular;
+    src: url('../fonts/quicksand-regular-webfont.woff') format('woff'),
+         url('../fonts/quicksand-regular-webfont.woff2') format('woff2');
+}
+
+body {
+    background-image: url('../images/backgrounds/fallBackground.jpg');
+    font-family: quicksand_regular;
+}
+
+/* Header */
+header {
+    background-color: rosybrown;
+    padding: 10px 0 10px 0;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-right: 10%;
+    margin-left: 10%;
+    border: 2px solid black;
+}
+
+#titleBar ul {
+    list-style-type: none;
+    margin-left: 320px;
+}
+
+#titleBar ul li:first-of-type {
+    font-size: 2.5em;
+    vertical-align: middle;
+    font-weight: bold;
+    margin-right: 100px;
+}
+
+#titleBar ul li {
+    display: inline;
+}
+
+nav ul {
+    list-style-type: none;
+    font-weight: bold;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px 0 10px;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: rgb(156, 21, 21);
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: blue;
+}
+
+/* Flex Grid (rest of document) excluding footer */
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+.flex-container {
+    background-color: rosybrown;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    padding: 5px 15px 5px 15px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px solid black;
+    margin-bottom: 140px;
+}
+
+figure {
+    text-align: center;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: small;
+}
+
+table {
+    margin: 10px 0 10px 0;
+}
+
+tr:nth-child(even) {
+    background-color: lightgreen;
+}
+
+tr:nth-child(odd) {
+    background-color: antiquewhite;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: rosybrown;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    right: 33%;
+    left: 33%;
+    border: 2px solid black;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li {
+    display: inline;
+}
+
+footer ul li a:link, footer ul li a:visited {
+    color: black;
+}
+
+footer ul li a:hover {
+    color: white;
+}
+
+footer ul li a:active {
+    color: blue;
+}
+

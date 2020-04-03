@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<!--
+    Author: Shinai Sorensen (except for content in 'class = flex-container' which was taken from learn.bcit.ca instead)
+    Date: March 4, 2020
+ -->
+
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <title>CSS3 Layout Large</title>
+
+    <!-- Link to CSS style sheet -->
+    <link rel='stylesheet' href='css/css3Layout.css'>
+
+    <!-- Link to font icons -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <!-- Icons and Title of Page -->
+        <div id='titleBar'>
+            <ul>
+                <li>COMP 1950 Lab 4 Large</li>
+                <li><a class='fa fa-shopping-cart' href='#'></a></li>
+                <li><i class='fa fa-search'></i></li>
+                <li><input type='text' placeholder="Search Here..."></li>
+            </ul>
+        </div>
+        
+
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li><a href='index.html'>Home</a></li>
+                <li><a href='cssLayoutMedium.html'>CSS3 Layout Medium</a></li>
+                <li><a href='cssLayoutSmall.html'>CSS3 Layout Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 
+        add this markup to an .html page
+        ensure CSS effectively styles all elements
+    -->
+
+    <div class='flex-container'>
+        <h1>Lorem Ipsum</h1>
+
+        <p><i>Lorem ipsum dolor sit amet</i>, consectetuer adipiscing elit. <u>Aenean commodo ligula</u> eget dolor. Aenean massa <strong>strong</strong>. Cum sociis natoque 
+            penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. <em>Nulla 
+            consequat massa</em> quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, 
+            venenatis vitae, justo. Nullam dictum felis eu pede <a class="external ext" href="#">hyper link</a> mollis pretium. Integer tincidunt. Cras 
+            dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. 
+            Aliquam lorem ante, dapibus in, viverra quis, <b>feugiat</b> a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. 
+            Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean 
+            vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, 
+            feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur 
+            ullamcorper ultricies nisi. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, 
+            porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus 
+            varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur <code>ullamcorper ultricies nisi.</code>
+        </p>
+
+        <figure>
+            <img src="images/css3LayoutImages/hulloThere.jpg" alt="placeholder image" />
+            <figcaption>Foreground Image</figcaption>
+        </figure>
+				
+        <h2>Aenean commodo</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis 
+            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+        </p>
+
+        <ol>
+            <li>Lorem ipsum dolor sit amet consectetuer.</li>
+            <li>Aenean commodo ligula eget dolor.</li>
+            <li>Aenean massa cum sociis natoque penatibus.</li>
+        </ol>
+
+        <h3>Eget dolor massa</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis 
+            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+        </p>
+
+        <ul>
+            <li>Lorem ipsum dolor sit amet consectetuer.</li>
+            <li>Aenean commodo ligula eget dolor.</li>
+            <li>Aenean massa cum sociis natoque penatibus.</li>
+        </ul>
+
+        <h4>Massa dolor</h4>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis 
+            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+        </p>
+
+        <blockquote>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</blockquote>
+
+        <h5>Massa dolor</h5>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis 
+            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+        </p>
+
+        <table class="data">
+            <tr>
+	            <th>Entry Header 1</th>
+	            <th>Entry Header 2</th>
+	            <th>Entry Header 3</th>
+	            <th>Entry Header 4</th>
+            </tr>
+            <tr>
+	            <td>Entry First Line 1</td>
+	            <td>Entry First Line 2</td>
+	            <td>Entry First Line 3</td>
+	            <td>Entry First Line 4</td>
+            </tr>
+            <tr>
+        	    <td>Entry Line 1</td>
+	            <td>Entry Line 2</td>
+	            <td>Entry Line 3</td>
+	            <td>Entry Line 4</td>
+            </tr>
+            <tr>
+	            <td>Entry Last Line 1</td>
+	            <td>Entry Last Line 2</td>
+	            <td>Entry Last Line 3</td>
+	            <td>Entry Last Line 4</td>
+            </tr>
+        </table>
+
+        <h6>Massa dolor</h6>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis 
+            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+        </p>
+
+        <h2>Aenean commodo</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis 
+            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+        </p>
+
+        <ol>
+            <li>Lorem ipsum dolor sit amet consectetuer.</li>
+            <li>Aenean commodo ligula eget dolor.</li>
+            <li>Aenean massa cum sociis natoque penatibus.</li>
+        </ol>
+
+        <h3>Eget dolor massa</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis 
+            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+        </p>
+
+        <ul>
+            <li>Lorem ipsum dolor sit amet consectetuer.</li>
+            <li>Aenean commodo ligula eget dolor.</li>
+            <li>Aenean massa cum sociis natoque penatibus.</li>
+        </ul>
+
+        <h4>Massa dolor</h4>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis 
+            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+        </p>
+
+        <blockquote>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</blockquote>
+
+        <h5>Massa dolor</h5>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis 
+            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+        </p>
+
+        <table class="data">
+            <tr>
+	            <th>Entry Header 1</th>
+	            <th>Entry Header 2</th>
+	            <th>Entry Header 3</th>
+	            <th>Entry Header 4</th>
+            </tr>
+            <tr>
+	            <td>Entry First Line 1</td>
+	            <td>Entry First Line 2</td>
+	            <td>Entry First Line 3</td>
+	            <td>Entry First Line 4</td>
+            </tr>
+            <tr>
+        	    <td>Entry Line 1</td>
+	            <td>Entry Line 2</td>
+	            <td>Entry Line 3</td>
+	            <td>Entry Line 4</td>
+            </tr>
+            <tr>
+	            <td>Entry Last Line 1</td>
+	            <td>Entry Last Line 2</td>
+	            <td>Entry Last Line 3</td>
+	            <td>Entry Last Line 4</td>
+            </tr>
+        </table>
+
+        <h6>Massa dolor</h6>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis 
+            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+        </p>
+        <br>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>COMP 1950 - Shinai Sorensen</p>
+
+        <!-- Social Media Icon Buttons -->
+        <ul>
+            <li><a class='fa fa-facebook-square' href='https://www.facebook.com/'></a></li>
+            <li><a class='fa fa-instagram' href='https://www.instagram.com'></a></li>
+            <li><a class='fa fa-twitter-square' href='https://www.twitter.com'></a></li>
+        </ul>
+
+    </footer>
+</body>
+</html>
+
+

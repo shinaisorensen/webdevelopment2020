@@ -1,0 +1,143 @@
+/* 
+    Author: Shinai Sorensen
+    Date: March 17, 2020
+*/
+
+/* The CSS Reset */
+@import url('reset/cssReset.css');
+
+/* Import new font */
+@font-face {
+    font-family: quicksand_regular;
+    src: url('../fonts/quicksand-regular-webfont.woff') format('woff'),
+         url('../fonts/quicksand-regular-webfont.woff2') format('woff2');
+}
+
+body {
+    background-image: url('../images/backgrounds/fallBackground.jpg');
+    font-family: quicksand_regular;
+}
+
+/* Header */
+header {
+    background-color: rosybrown;
+    padding: 10px 0 10px 0;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-right: 10%;
+    margin-left: 10%;
+    border: 2px solid black;
+}
+
+nav ul {
+    list-style-type: none;
+    font-weight: bold;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px 0 10px;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: rgb(156, 21, 21);
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: blue;
+}
+
+/* Flex Grid (rest of document) excluding footer */
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+.flex-container {
+    background-color: rosybrown;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    padding: 5px 15px 5px 15px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px solid black;
+    margin-bottom: 140px;
+}
+
+section a {
+    text-decoration: underline;
+}
+
+/* 
+    Autocomplete plug-in 
+
+    The following changes were made to the style of the plug-in:
+        - Background color of drop-down menu was changed from transparent
+        to a light gray
+        - Automated bullet points were removed and the list of available
+        menu items were positioned to the left of the drop-down area
+        - User is now able to hover over items and preview their selection in
+        light green
+        - User will now have confirmation that they clicked their selection
+        by seeing the resulting colour change from light green to light pink
+        - A border was applied around the drop-down menu so that it's clearer
+        to see
+*/
+.ui-autocomplete {
+    background-color: lightgray;
+    list-style-type: none;
+    width: 150px;
+    padding: 0;
+}
+
+/* Drop-down menu used for the autocomplete plug-in */
+.ui-menu-item {
+    display: block;
+    border: solid 1px black;
+}
+
+.ui-menu-item:hover {
+    background-color: lightpink;
+}
+
+.ui-menu-item:active {
+    background-color: lightgreen;
+}
+
+/* 
+    Date Picker plug-in
+
+    Style changed by adding a background color so the user can see the
+    calendar better
+*/
+
+#date {
+    width: 300px;
+}
+
+.ui-datepicker {
+    background-color: lightgray;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: rosybrown;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    right: 33%;
+    left: 33%;
+    border: 2px solid black;
+}
+

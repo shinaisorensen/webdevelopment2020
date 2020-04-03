@@ -1,0 +1,82 @@
+/* 
+    Author: Shinai Sorensen
+    Student Number: A01059813  
+*/
+
+body {
+    background-image: url("../images/backgrounds/redBackground.jpg");
+    font-family: "Verdana", sans-serif;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: blue;
+}
+
+#headerContainer {
+    text-align: center;
+}
+
+/* Navigation bar */
+#navContainer {
+    background-color: lightpink;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#navBar {
+    list-style-type: none;
+}
+
+#navBar li {
+    display: inline;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+}
+
+/* Profile */
+#profileContainer.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#chibiMe {
+    width: 325px;
+}
+
+#profileContent {
+    flex-basis: 500px;
+}
+
+/* Links */
+.linkHeader {
+    text-align: center;
+}
+
+.linkList {
+    margin-left: 20%;
+    margin-right: auto;
+}
+
+/* Footer */
+footer {
+    background: lightpink;
+    padding: 5px;
+    text-align: center;
+}
