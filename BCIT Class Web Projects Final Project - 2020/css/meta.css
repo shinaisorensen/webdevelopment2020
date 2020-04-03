@@ -1,0 +1,44 @@
+/*
+    Author: Shinai Sorensen
+    Date: March 28, 2020
+*/
+/* Import a new font */
+@font-face {
+  font-family: pigiarniq;
+  src: url("../fonts/pigiarniq_regular-webfont.woff") format("woff"), url("../fonts/pigiarniq_regular-webfont.woff2") format("woff2");
+}
+
+body {
+  color: #2D3047;
+  background-color: #82204A;
+  font-family: pigiarniq;
+}
+
+.header-grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  background-color: #C0A9B0;
+  border: 2px solid #2D3047;
+  margin-bottom: 10px;
+}
+
+header figure {
+  text-align: right;
+}
+
+header figure img {
+  width: 100px;
+  height: auto;
+}
+
+@media print {
+  a[href^='http']:after {
+    content: " (URL: " attr(href) ") ";
+  }
+  a:link, a:visited, a:hover, a:active {
+    color: #000000;
+    font-size: 1em;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,196 @@
+/*
+    Author: Shinai Sorensen
+    Date: March 28, 2020
+*/
+
+/* Import a new font */
+@font-face {
+    font-family: pigiarniq;
+    src: url('../fonts/pigiarniq_regular-webfont.woff') format('woff'),
+         url('../fonts/pigiarniq_regular-webfont.woff2') format('woff2');
+}
+
+// Variables
+$gunmetal: #2D3047;
+$pansyPurple: #82204A;
+$blackShadows: #C0A9B0;
+$celestialBlue: #449DD1;
+$glaucous: #7880B5;
+$laurelGreen: #A9B18F;
+$white: #FFFFFF;
+$black: #000000;
+
+// Body
+body {
+    color: $gunmetal;
+    background-color: $pansyPurple;
+    font-family: pigiarniq;
+}
+
+// Header
+.header-grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    background-color: $blackShadows;
+    border: 2px solid $gunmetal;
+    margin-bottom: 10px;
+}
+
+header figure {
+    text-align: right;
+}
+
+header figure img {
+    width: 100px;
+    height: auto;
+}
+
+// Main Course Selection page
+.selectionSections {
+    background-color: $blackShadows;
+    border: 2px solid $gunmetal;
+    text-align: center;
+    margin: 3% 10% 3% 10%;
+    padding-top: 1%;
+}
+
+.grid-container-1850 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: 'twelveWeekEve sixWeek';
+}
+
+.grid-container-1950 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: 'twelveWeekEve twelveWeekAft sixWeek';
+}
+
+.selectionSections a {
+    text-decoration: none;
+    padding: 20px 5px 20px 5px;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 2em;
+    border: 2px solid $gunmetal;
+}
+
+.selectionSections a:link, .selectionSections a:visited {
+    color: $gunmetal;
+}
+
+.selectionSections a:hover {
+    background-color: $pansyPurple;
+    color: $white;
+}
+
+.selectionSections a:active {
+    background-color: $gunmetal; 
+    color: $white;
+}
+
+.twelveWeekEve {
+    grid-area: twelveWeekEve;
+    background-color: $celestialBlue;
+}
+
+.twelveWeekAft {
+    grid-area: twelveWeekAft;
+    background-color: $laurelGreen;
+}
+
+.sixWeek {
+    grid-area: sixWeek;
+    background-color: $glaucous;
+}
+
+// Media queries for different screen sizes
+@media screen and (max-width: 856px) {
+    .selectionSections .grid-container-1950 {
+        grid-template-areas: 
+            'twelveWeekEve twelveWeekEve twelveWeekEve'
+            'twelveWeekAft twelveWeekAft twelveWeekAft'
+            'sixWeek sixWeek sixWeek';
+    }
+}
+
+@media screen and (max-width: 787px) {
+    h1 {
+        font-size: 2em;
+    }
+    .selectionSections h2 {
+        font-size: 1.5em;
+    }
+    .selectionSections a {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 1.4em;
+    }
+    .selectionSections h2 {
+        font-size: 1.1em;
+    }
+    .selectionSections a {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .selectionSections .grid-container-1850 {
+        grid-template-columns: auto;
+        grid-template-areas: 
+            'twelveWeekEve' 
+            'sixWeek';
+    }
+}
+
+// Media query for printing
+@media print {
+    body {
+        color: $black;
+        font-size: 1em;
+    }
+
+    .selectionSections h2 {
+        font-size: 1.2em;
+    }
+
+    .header-grid-container {
+        font-size: 1em;
+        // border: none; 
+    }  
+    
+    .header-grid-container h1 {
+        font-size: 1.5em;
+    }
+    
+    .selectionSections .grid-container-1950 {
+        grid-template-areas: 
+            'twelveWeekEve twelveWeekEve twelveWeekEve'
+            'twelveWeekAft twelveWeekAft twelveWeekAft'
+            'sixWeek sixWeek sixWeek';
+    }
+
+    .selectionSections .grid-container-1850 {
+        grid-template-columns: auto;
+        grid-template-areas: 
+            'twelveWeekEve' 
+            'sixWeek';
+    }
+
+    a[href ^= 'http']:after {
+        content: ' (URL: ' attr(href) ') ';   
+    }
+    
+    a:link, a:visited, a:hover, a:active {
+        color: $black;
+        font-size: 1em;
+        text-decoration: underline;
+    }
+}

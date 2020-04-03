@@ -1,0 +1,422 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* 
+	Author: Shinai Sorensen (Only Shinai's Formatting section)
+
+	Rest of reset is from online resources (see comment at top of file)
+	
+	Shinai's Notes:
+
+	NNFSY (No Need For Styling Yet) note that some are not supported by HTML5 anyway:
+	span, applet, object, acronym, hgroup, ruby, time, audio, video 
+
+	menu tag only works in Firefox
+
+	List of tags that have styling:
+
+	html, body, div, blockquote, pre, h1, h2, h3, h4, h5, h6, p, iframe, a, address, big, cite, code, del, dfn, em, 
+	ins, kbd, q, s, samp, small, b, u, i, center, abbr, img, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, 
+	li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, 
+	details, embed, figure, figcaption, footer, header, nav, output, section, summary, mark
+
+	margin: top right bottom left
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ********************************************************************************************************* */
+
+/* Shinai's Formatting */
+
+html {
+	display: block;
+}
+
+body {
+	display: block;
+}
+
+div {
+	display: block;
+}
+
+iframe {
+	display: inline-block;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 2.5em;
+}
+
+h3 {
+	font-size: 2.1em;
+}
+
+h4 {
+	font-size: 1.7em;
+}
+
+h5 {
+	font-size: 1.5em;
+}
+
+h6 {
+	font-size: 1.3em;
+}
+
+p {
+	display: block;
+	margin: 1em 0 1em 0;
+}
+
+blockquote {
+	display: block;
+	margin: 1em 40px 1em 40px;
+}
+
+pre {
+	display: block;
+	font-family: monospace;
+	white-space: pre;
+	margin: 1em 0 0 0;
+}
+
+a {
+	text-decoration: underline;
+}
+
+a:link {
+	color: blue;
+} 
+
+a:visited {
+	color: purple;
+}
+
+a:hover {
+	color: red;
+}
+
+a:active {
+	color: black;
+}
+
+abbr {
+	display: inline;
+} 
+
+address {
+	font-style: italic;
+} 
+
+big {
+	font-size: 1.5em;
+} 
+
+cite {
+	font-style: italic;
+}
+
+code {
+	font-family: monospace;
+}
+
+del {
+	text-decoration: line-through;
+} 
+
+dfn {
+	font-style: italic;
+} 
+
+em {
+	font-style: italic;
+}
+
+img {
+	display: inline-block;
+}
+
+ins {
+	text-decoration: underline;
+} 
+
+kbd {
+	font-family: monospace;
+} 
+
+q {
+	display: inline;
+}
+  
+q:before {
+	content: open-quote;
+}
+  
+q:after {
+	content: close-quote;
+}
+
+s {
+	text-decoration: line-through;
+} 
+
+samp {
+	font-family: monospace;
+}
+
+small {
+	font-size: 0.5em;
+}
+
+strike {
+	text-decoration: line-through;
+}
+
+strong  {
+	font-weight: bold;
+}
+
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+
+tt {
+	font-family: monospace;
+}
+
+var {
+	font-style: italic;
+}
+
+b {
+	font-weight: bold;
+}
+
+u {
+	text-decoration: underline;
+}
+
+i {
+	font-style: italic;
+}
+
+center {
+	text-align: center;
+}
+
+dl {
+	display: block;
+	margin: 1em 0 1em 0;
+}
+
+dt {
+	display: block;
+}
+
+dd {
+	display: block;
+	margin-left: 40px;
+}
+
+ol {
+	display: block;
+	list-style-type: decimal;
+	margin: 1em 0 1em 0;
+	padding-left: 40px;
+}
+
+ul {
+	display: block;
+	list-style-type: disc;
+	margin: 1em 0 1em 0;
+	padding-left: 40px;
+}
+
+li {
+	display: list-item;
+}
+
+fieldset {
+	display: block;
+	margin: 0 2px 0 2px;
+	padding: 0.35em 0.75em 0.625em 0.75em;
+	border: 1px groove black;
+}
+
+form {
+	display: block;
+	margin-top: 0em;
+}
+
+label {
+	cursor: default;
+}
+
+legend {
+	display: block;
+	padding: 0 2px 0 2px;
+	border: none;
+}
+
+table {
+	display: table;
+	border-collapse: separate;
+	border-spacing: 2px;
+	border: 1px solid black;
+}
+
+caption {
+	display: table-caption;
+	text-align: center;
+}
+
+tbody {
+	display: table-row-group;
+	vertical-align: middle;
+	border: 1px solid black;
+}
+
+tfoot {
+	display: table-footer-group;
+	vertical-align: middle;
+	border: 1px solid black;
+}
+
+thead {
+	display: table-header-group;
+	vertical-align: middle;
+	border: 1px solid black;
+}
+
+tr {
+	display: table-row;
+	vertical-align: inherit;
+}
+
+th {
+	display: table-cell;
+	vertical-align: inherit;
+	font-weight: bold;
+	text-align: center;
+	border: 1px solid black;
+}
+
+td {
+	display: table-cell;
+	vertical-align: inherit;
+	border: 1px solid black;
+}
+
+article {
+	display: block;
+}
+
+aside {
+	display: block;
+}
+
+canvas {
+	height: 100px;
+	width: 100px;
+}
+
+details {
+	display: block;
+}
+
+embed {
+	outline: none;
+}
+
+figure {
+	display: block;
+	margin: 1em 40px 1em 40px;
+}
+
+figcaption {
+	display: block;
+}
+
+footer {
+	display: block;
+}
+
+header {
+	display: block;
+}
+
+nav {
+	display: block;
+}
+
+output {
+	display: inline;
+}
+
+section {
+	display: block;
+}
+
+summary{
+	display: block;
+}
+
+mark {
+	background-color: yellow;
+}

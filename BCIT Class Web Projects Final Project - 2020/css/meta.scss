@@ -1,0 +1,60 @@
+/*
+    Author: Shinai Sorensen
+    Date: March 28, 2020
+*/
+
+/* Import a new font */
+@font-face {
+    font-family: pigiarniq;
+    src: url('../fonts/pigiarniq_regular-webfont.woff') format('woff'),
+         url('../fonts/pigiarniq_regular-webfont.woff2') format('woff2');
+}
+
+// Variables
+$gunmetal: #2D3047;
+$pansyPurple: #82204A;
+$blackShadows: #C0A9B0;
+$celestialBlue: #449DD1;
+$glaucous: #7880B5;
+$laurelGreen: #A9B18F;
+$white: #FFFFFF;
+$black: #000000;
+
+// Body
+body {
+    color: $gunmetal;
+    background-color: $pansyPurple;
+    font-family: pigiarniq;
+}
+
+// Header
+.header-grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    background-color: $blackShadows;
+    border: 2px solid $gunmetal;
+    margin-bottom: 10px;
+}
+
+header figure {
+    text-align: right;
+}
+
+header figure img {
+    width: 100px;
+    height: auto;
+}
+
+// Media query for printing
+@media print {
+    a[href ^= 'http']:after {
+        content: ' (URL: ' attr(href) ') ';   
+    }
+    
+    a:link, a:visited, a:hover, a:active {
+        color: $black;
+        font-size: 1em;
+        text-decoration: underline;
+    }
+}
