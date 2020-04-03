@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab 6</title>
+	<meta name = "author" content = "Shinai Sorensen">
+	<meta charset = "UTF-8">
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+	
+	<link rel = "stylesheet" href = "https://www.w3schools.com/w3css/4/w3.css">
+	<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  </head>
+  
+  <body>
+
+    <script src = "https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script>
+	  $(document).ready(function() {
+	    $("body").css("background-color", "#ff66a3");
+		///////////////////////////////////////////////////////////////////
+		var rhportrait = $("<img>");
+		$(rhportrait).attr("src", "https://i.imgur.com/8VEJNAA.jpg");
+		$(rhportrait).css({"width" : "100%",
+		"height" : "100%",
+		"z-index" : "-40",
+		"opacity" : "0.3"
+		});
+		$("body").append($(rhportrait));
+		///////////////////////////////////////////////////////////////////
+		var leftMenuContainer = $("<span></span>");
+		$(leftMenuContainer).css("float", "left");
+		var leftMenu = $("<i></i>");
+		$(leftMenu).attr("class", "fa fa-bars");
+		$(leftMenu).css({"color" : "white",
+		"font-size" : "40px"
+		});
+		$(leftMenuContainer).append($(leftMenu));
+		
+		var home = $("<span>Home</span>");
+		$(home).css({"margin-left" : "45%",
+		"color" : "white",
+		"font-family" : "Arial",
+		"display" : "block",
+		"font-size" : "40px",		
+		});
+		
+		var rightMenuContainer = $("<span></span>");
+		$(rightMenuContainer).css({"float" : "right",
+		"margin-top" : "-58px",
+		"margin-right" : "5px"
+		});
+		var rightMenu = $("<i></i>");
+		//$(rightMenu).attr("class", "fa fa-ellipsis-h");
+		$(rightMenu).addClass("fa fa-ellipsis-h");		
+		$(rightMenu).css({"color" : "white",
+		"font-size" : "40px",		
+		});
+		$(rightMenuContainer).append($(rightMenu));         		
+		
+		var headerItems = $("<div><div>");
+		$(headerItems).css({"display" : "table",
+		"width" : "100%",
+		});
+		
+		$(headerItems).append($(leftMenuContainer));
+		$(headerItems).append($(home));
+		$(headerItems).append(rightMenuContainer);
+		$("body").prepend($(headerItems));
+		///////////////////////////////////////////////////////////////////
+		var erucaContainer = $("<div></div>");
+		$(erucaContainer).css({"float" : "center",
+		"display" : "block",
+		"margin-top" : "-145%",
+		"margin-left" : "43.5%",
+		"margin-right" : "auto",
+		"margin-bottom" : "auto"
+		});
+		var eruca = $("<img>");
+		$(eruca).attr("src", "eruca.png");
+		$(eruca).css({"border-radius" : "70%",
+		"border" : "3px solid black",
+		"height" : "17%",
+		"width" : "17%",
+		"transform" : "scale(0.99)"
+		});
+		$(erucaContainer).append($(eruca));
+		$("body").append($(erucaContainer));
+		///////////////////////////////////////////////////////////////////
+		var erucaText = $("<div>Eruca<div>");
+		$(erucaText).css({"font-family" : "Arial",
+		"font-size" : "180%",
+		"color" : "white",
+		"margin-left" : "45.5%",
+		"transform" : "scale(0.99)"
+		});
+		$("body").append($(erucaText));
+		///////////////////////////////////////////////////////////////////
+		var erucaText1 = $("<div>The princess of Granorg, she is compassionate "
+		+ "and beloved by all her people. With a strong moral compass, she isn't "
+		+ "afraid to stand up for those below her station<div>");
+		$(erucaText1).css({"font-family" : "Arial",
+		"font-size" : "180%",
+		"color" : "white",
+		"text-align" : "center",
+		"width" : "70%",
+		"margin-left" : "auto",
+		"margin-right" : "auto",
+		"transform" : "scale(0.99)"
+		});
+		$("body").append($(erucaText1));
+		///////////////////////////////////////////////////////////////////
+		var followContainer = $("<div>Follow</div>");
+		$(followContainer).css({"padding" : "10px 0 10px 0",
+		"width" : "10%",
+        "text-align" : "center",		
+		"background-color" : "#ffe066",
+		"font-weight" : "bold",
+		"transform" : "scale(0.99)",
+		"margin-left" : "43.5%",
+		"margin-right" : "auto",
+		"margin-top" : "5%"
+		});
+		$("body").append($(followContainer));
+		///////////////////////////////////////////////////////////////////
+		var firstContainer = $("<div></div>");
+		$(firstContainer).css({"background-color" : "white",
+		"width" : "40%",
+		"padding" : "10px",
+		"margin-top" : "5%",
+		"margin-left" : "auto",
+		"margin-right" : "auto",
+		"transform" : "scale(0.99)"
+		});
+		var yesterday = $("<p>yesterday</p>");
+		$(yesterday).css("color", "#b3b3b3");
+		var RaynieUpdate = $("<p>Raynie mentioned Eruca in a post</p>");
+		var RayniePost = $("<p>\"Hey Eruca! There's a festival in Cygnus this week, let's go together!\"</p>");
+		
+		var bottomContainer = $("<p></p>");
+		var bottomContainerContent = $("<span></span>");
+		var heart = $("<i></i>");
+		$(heart).addClass("fas fa-heart");
+		$(heart).css("color", "red");
+		var bottomContainerContent1 = $("<span> 45 </span>");
+		var bottomContainerContent2 = $("<span></span>");
+		var chatbox = $("<i></i>");
+		$(chatbox).addClass("fas fa-comment");
+		$(chatbox).css("color", "#b3b3b3");
+		var bottomContainerContent3 = $("<span> 21 </span>");
+		
+		$(bottomContainerContent).append($(heart));
+		$(bottomContainerContent2).append($(chatbox));
+		$(bottomContainer).append($(bottomContainerContent));
+		$(bottomContainer).append($(bottomContainerContent1));
+		$(bottomContainer).append($(bottomContainerContent2));
+		$(bottomContainer).append($(bottomContainerContent3));
+		
+		$(firstContainer).append($(yesterday));
+		$(firstContainer).append($(RaynieUpdate));
+		$(firstContainer).append($(RayniePost));
+		$(firstContainer).append($(bottomContainer));
+		
+		$("body").append($(firstContainer));
+		///////////////////////////////////////////////////////////////////
+		var secondContainer = $("<div></div>");
+		$(secondContainer).css({"background-color" : "white",
+		"width" : "40%",
+		"padding" : "10px",
+		"margin-top" : "5%",
+		"margin-left" : "auto",
+		"margin-right" : "auto",
+		"transform" : "scale(0.99)"
+		});
+		var yesterday1 = $("<p>2 days ago</p>");
+		$(yesterday1).css("color", "#b3b3b3");
+		var MarcoUpdate = $("<p>Marco uploaded 4 more pictures</p>");
+		var MarcoPost = $("<p></p>");
+		$(MarcoPost).css("padding", "1%");
+		var MarcoPicture = $("<img>");
+		$(MarcoPicture).attr("src", "Marco1.png");
+		$(MarcoPicture).css({"width" : "15%",
+		"padding-right" : "2%"
+		});
+		var MarcoPicture1 = $("<img>");
+		$(MarcoPicture1).attr("src", "Marco2.png");
+		$(MarcoPicture1).css({"width" : "15%",
+		"padding-right" : "2%"
+		});
+		var MarcoPicture2 = $("<img>");
+		$(MarcoPicture2).attr("src", "Marco3.png");
+		$(MarcoPicture2).css({"width" : "15%",
+		"padding-right" : "2%"
+		});
+		var MarcoPicture3 = $("<img>");
+		$(MarcoPicture3).attr("src", "Marco4.png");
+		$(MarcoPicture3).css({"width" : "15%",
+		"padding-right" : "2%"
+		});
+		
+		$(MarcoPost).append(MarcoPicture);
+		$(MarcoPost).append(MarcoPicture1);
+		$(MarcoPost).append(MarcoPicture2);
+		$(MarcoPost).append(MarcoPicture3);
+		
+		var bottomContainer1 = $("<p></p>");
+		var bottomContainerContent4 = $("<span></span>");
+		var heart1 = $("<i></i>");
+		$(heart1).addClass("fas fa-heart");
+		$(heart1).css("color", "#b3b3b3");
+		var bottomContainerContent5 = $("<span> 33 </span>");
+		var bottomContainerContent6 = $("<span></span>");
+		var chatbox1 = $("<i></i>");
+		$(chatbox1).addClass("fas fa-comment");
+		$(chatbox1).css("color", "#b3b3b3");
+		var bottomContainerContent7 = $("<span> 10 </span>");
+		
+		$(bottomContainerContent4).append($(heart1));
+		$(bottomContainerContent6).append($(chatbox1));
+		$(bottomContainer1).append($(bottomContainerContent4));
+		$(bottomContainer1).append($(bottomContainerContent5));
+		$(bottomContainer1).append($(bottomContainerContent6));
+		$(bottomContainer1).append($(bottomContainerContent7));
+		
+		$(secondContainer).append($(yesterday1));
+		$(secondContainer).append($(MarcoUpdate));
+		$(secondContainer).append($(MarcoPost));
+		$(secondContainer).append($(bottomContainer1));
+		
+		$("body").after($(secondContainer));
+	  });
+	</script>
+  </body>
+</html>
+
+
+<! Jquery calls: must include one of each before, after>
+
+
+
+
+
+
+
+
+
+
+

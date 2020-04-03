@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab 3</title>
+    <meta charset="UTF-8">
+	<style>
+	  * {
+	    font-family: "Times New Roman", Georgia;
+		font-size: 16px;
+		color: black;
+		letter-spacing: normal;
+		width: 90%;
+		margin: auto;
+	  }
+	  #intro1 {
+	    width: 35%;
+		margin: 5em;
+	  }
+	  
+	  #firstTitle {
+	    font-family: "Arial", Verdana, Times;
+		font-size: 95px;
+		letter-spacing: 10px;
+		line-height: 90px;
+		transform: scaleY(2.05);
+		transform-origin: 0 0;
+		margin-bottom: 2.25em;
+      }
+	  #newsAuthor {
+	    font-family: "Arial", Verdana, Times;
+	    font-size: 6px;
+		letter-spacing: 1px;
+		transform: scaleY(2.05);
+		
+	  }
+	  #newsText {
+	    column-count: 3;
+		column-width: 2em;
+		column-gap: 2em;
+		height: 21em;
+		column-fill: auto;
+		position: relative;
+		top: -60px;
+		left: -40px;
+        font-size: 12px;		
+	  }
+      #newsTextFirstLetter {
+	    display: inline-block;
+		float: left;
+		transform: scaleY(3);
+		font-size: 18px;
+		margin-bottom: -7px;
+		margin-top: 10px;
+		font-weight: bold;
+	  }
+      #newsTextFirstParagraph {
+	    display: inline-block;
+		font-size: 12px;
+		margin-left: 10px;
+		margin-top: -60px;
+		column-count: 1;
+		column-width: 2em;
+	  }
+	  #thirdColumn {
+	    font-size: 12px;
+		width: 28%;
+		margin-left: 58em;
+		margin-top: -68em;
+	  }
+	  #paragraphQuote {
+	    display: block;
+		width: 100%;
+		font-size: 18px;
+		border-top-style: solid;
+		border-top-width: 1px;
+		border-top-color: black;
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+		border-bottom-color: black;
+		margin-left: 0px;
+		margin-top: 10px;
+		margin-bottom: 8px;
+		line-height: 30px;
+	    
+	    font-weight: bold;
+	  }
+	  #pageNumber {
+	    font-family: "Arial", Verdana, Times;
+	    font-size: 8px;
+		font-weight: bold;
+		margin-left: 15px;
+		margin-top: 10px;
+	  }
+	  #magazineIssue {
+	  	font-family: "Arial", Verdana, Times;
+	    font-size: 8px;
+		font-weight: bold;
+		margin-left: 570px;
+		margin-top: -9px;
+	  }
+	  
+	  hr {
+	    display: block;
+		margin-top: 2em;
+		margin-bottom: 2em;
+		margin-left: auto;
+		margin-right: auto;
+		border-style: solid;
+		border-color: black;
+	  }
+	  @font-face {
+	    font-family: bonnFont;
+		src: url(bonn_regular.ttf);
+	  }
+	  @font-face {
+	    font-family: dozerFont;
+		src: url(DozerOne.ttf);
+	  }
+	  @font-face {
+        font-family: cornerstoneFont;
+		src: url(Cornerstone.ttf);
+	  }
+	  @font-face {
+	    font-family: museoFont;
+		src: url(museo_slab_500.otf);
+	  }
+	  @font-face {
+	    font-family: babaFont;
+		src: url(BebasKai.otf);
+	  }
+      #line1 {
+		text-align: center;
+		padding-left: 8px;
+		padding-right: 12px;
+		letter-spacing: 2px;
+		width: 3.8em;
+		font-size: 20px;
+		font-style: italic;
+		border-left: 492px solid #b3b300;
+		border-right: 492px solid #b3b300;
+      }	 
+      #line2 {
+	    width: 150%;
+		font-size: 110px;
+		letter-spacing: 14.5px;
+		margin-left: 10px;
+        font-family: bonnFont;	    
+      }	
+      #line3 {
+	    text-align: center;
+        width: 150%;		
+        font-family: museoFont;		
+        font-size: 45px;
+		font-weight: 900;
+		transform: scaleY(0.80);
+		letter-spacing: 16.5px;
+		margin-left: -270px;
+		margin-top: -20px;
+      }	
+      #line4 {
+        font-family: cornerstoneFont;
+	    padding-left: 8px;
+		padding-right: 8px;
+		width: 8em;
+		text-align: center;	 
+        font-size: 20px;
+        border-left: 452px solid #99ebff;
+        border-right: 452px solid #99ebff;	
+      }	
+      #line5 {
+	    text-align: center;
+        letter-spacing: 4.43px;
+        width: 150%;
+        margin-left: -275px;
+        margin-top: 10px;	    
+      }	
+      #line6 {
+	    text-align: center;
+        font-family: bonnFont;
+        font-size: 175px;
+		width: 150%;
+        letter-spacing: 9px;
+		margin-left: -268px;
+		margin-top: -5px;
+      }	
+      #line7 {
+	    text-align: center;
+		padding-left: 8px;
+		padding-right: 8px;
+		letter-spacing: 2px;
+		width: 5em;
+		font-size: 20px;
+		font-style: italic;
+		border-left: 480px solid red;
+		border-right: 480px solid red;
+        margin-top: -20px;		
+      }	
+      #line8 {
+	    text-align: center;
+        font-family: bonnFont;
+        font-size: 45px;
+        letter-spacing: 5.29px;
+        width: 150%;
+        margin-left: -275px;
+        margin-top: 10px;	    
+      }	
+      #line9 {
+	    text-align: center;	
+        font-family: babaFont;
+        font-size: 190px;
+        transform: scaleY(0.6);
+        font-weight: 900;
+        letter-spacing: 26.1px;
+        width: 120%;
+        margin-left: -100px;
+        margin-top: -63px;		
+      }	
+      #line10 {
+	    text-align: center;
+        font-family: babaFont;
+        font-size: 20px;
+		letter-spacing: 9px;
+		width: 12em;
+		padding-left: 2px;
+		padding-right: 0px;
+		border-left: 415px solid #cccc00;
+		border-right: 415px solid #cccc00;
+        margin-top: -55px;
+        margin-bottom: 20px;	    
+      }
+      #electricGrid {
+        font-style: italic;
+	  }	  
+	  #line11 {
+	    column-count: 2;
+        width: 96.5%;
+		font-size: 12px;	    
+      }	
+	  #pageNumber2 {
+	    float: center;
+		font-style: italic;
+	    font-size: 40px;
+		margin-left: 1000px;
+		margin-right: -25px;
+	  }
+	  #squares {
+        margin-left: 1050px;
+		margin-top: -35px;
+	  }
+	  img {
+	    float: left;
+		max-width: 60%;
+		height: auto;
+		border-radius: 70%;
+		shape-outside: circle(50%);
+		margin-right: 20px;
+	  }
+	  #coffeeText {
+	    clear: left;
+		margin-left: auto;
+		margin-right:auto;
+        line-height: 25px;
+		width: 58%;
+		background-color: #aeeaea;
+		padding: 15px;
+	  }
+	</style>
+  </head>
+  <body>
+    <div id="intro1">
+	  <h1 id="firstTitle">Bing Crosby</h1>
+	  <p>With a new album released and his first SNL appearance just days away, the 
+	  Washington native talks about music, fame and golf.</p><br/>
+	  <p id="newsAuthor">By Amy Moeller</p>
+	</div>
+	<div>
+	  <p id="newsText"><span id="newsTextFirstLetter">I</span><span id="newsTextFirstParagraph">orem ipsum dolor sit amet, 
+	  consectetur adipiscing elit. Maecenas vel neque porta magna tempus dapibus. 
+	  Vivamus finibus ipsum ac congue tincidunt. </span>Class aptent taciti sociosqu ad litora torquent per conubia nostra, 
+	  per inceptos himenaeos. Pellentesque tempor congue nisi, luctus ornare tortor interdum in. Curabitur felis 
+	  ante, ultrices sit amet convallis et, tristique ac sapien. Aenean sit amet libero nec lorem semper commodo 
+	  vitae congue enim. Aliquam imperdiet nibh vitae metus dignissim, non porttitor lacus volutpat. Maecenas at 
+	  sapien auctor tellus mollis lacinia. <br/>Pellentesque ut massa ut risus luctus aliquet et et ligula. Nam ut erat 
+	  sollicitudin felis bibendum tincidunt sit amet a lorem. Mauris dapibus tortor ut magna blandit euismod. 
+	  Integer in feugiat quam. Morbi non semper est. Nullam vehicula eleifend ipsum sit amet euismod. Nunc nec 
+	  accumsan felis. Quisque fringilla sit amet orci vitae ornare. Curabitur nec ligula in mi venenatis placerat. 
+	  Vivamus feugiat leo vel purus mattis facilisis. Cras blandit eget quam a scelerisque. Mauris sed blandit 
+	  neque, quis eleifend est. Praesent lacinia libero in metus venenatis, at vulputate magna tempus. Pellentesque 
+	  nisl tortor, maximus a fringilla nec, congue quis erat. Aenean nec luctus eros. <br/>Donec non neque consectetur 
+	  lorem dignissim facilisis ac mattis lectus. Aliquam nec ultricies nisi, et suscipit erat. Fusce sollicitudin 
+	  nisl sed est aliquet cursus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas 
+	  consectetur tempor tempus. Morbi mollis odio eu sodales lacinia. Etiam eget mauris sagittis, lobortis dolor 
+	  sit amet, imperdiet neque. <br/>Proin nec ante vel dui egestas dapibus non sed turpis. Proin porttitor eu purus 
+	  hendrerit pharetra. Etiam eget nisi ut lectus volutpat aliquam. Nulla eu risus eu leo gravida scelerisque 
+	  sed accumsan magna. Donec ultrices turpis nec ultrices efficitur. In interdum, justo et condimentum cursus, 
+	  erat nibh varius purus, id imperdiet sem dolor et diam. Vestibulum et mi quis est fermentum tempus sed sed orci. 
+	  Proin aliquam mauris non mi molestie, quis rhoncus libero efficitur. Donec sed est sed ante
+	  </p>
+	  <p id="thirdColumn">varius interdum 
+	  eu at dui. Fusce nibh mauris, auctor sit amet orci vel, aliquam vehicula mauris. Mauris mollis gravida odio 
+	  et iaculis. Duis eleifend urna erat, nec cursus mauris gravida ut. Sed et efficitur enim, non maximus ligula. 
+	  Aenean sem quam, vulputate eget egestas vitae, pharetra sit amet massa. Lorem ipsum dolor sit amet, consectetur 
+	  adipiscing elit. Cras viverra cursus orci eget sodales. Nulla tempus mollis leo, vel posuere metus feugiat eu. 
+	  Mauris interdum nunc at arcu cursus, et pharetra quam gravida. Phasellus id ipsum quam. <br/><span id="paragraphQuote">
+	  "We'd dub the one that came off best into the final transcription. It gave us a chance to ad lib as we wanted, 
+	  knowing that excess ad libbing could be sliced from the final product."</span><br/>Phasellus hendrerit egestas 
+	  enim, vitae rhoncus erat interdum nec. Fusce eu aliquet justo. In fermentum non justo vel ullamcorper. Quisque dignissim 
+	  euismod nibh. In dolor lacus, congue nec tortor sit amet, rutrum blandit erat. Quisque at purus et nibh semper lacinia. 
+	  Fusce eu blandit risus. In nec ligula mi. Sed imperdiet, mi id luctus tincidunt, arcu leo varius est, consectetur 
+	  vestibulum mi velit eget erat. <br/>Duis dignissim, tellus eu hendrerit tincidunt, ex lorem ornare quam, quis pretium neque 
+	  tellus id lacus. Phasellus lectus libero, luctus dignissim erat sed, pharetra laoreet massa. Nunc feugiat vehicula orci
+	  at eleifend. Vivamus facilisis ornare sapien, eget facilisis magna viverra sit amet. Sed at erat ac massa malesuada sodales. 
+	  In hac habitasse platea dictumst. Etiam gravida odio et neque euismod, id cursus felis sodales. Sed non consectetur ligula, 
+	  quis pharetra erat. <br/>Suspendisse nisi quam, vulputate vel nunc sit amet, finibus viverra justo. Maecenas sed augue eget 
+	  tellus eleifend euismod. Vestibulum quis enim ut nibh tempus vestibulum. Praesent ex neque, vehicula vitae mi sed, mattis 
+	  pulvinar magna. Vestibulum nec mauris vel erat elementum dictum. Morbi suscipit eros tellus, vel tempor risus sollicitudin 
+	  sed. Nam quis rhoncus dolor. Curabitur auctor urna at posuere euismod. Proin eget luctus est, id tempor massa. Donec a 
+	  purus lorem. Duis nec dui quis tellus condimentum tincidunt. Duis porttitor egestas sem ac porta. Suspendisse ac pellentesque 
+	  lorem. <br/>Sed sapien eros, lacinia quis sem sit amet, ullamcorper porttitor ipsum. Curabitur ullamcorper, lacus commodo varius 
+	  ultricies, purus quam tincidunt ante, non hendrerit dui erat vel tellus. Pellentesque vulputate commodo felis, nec ultricies
+	  ipsum eleifend in. Vestibulum lobortis accumsan purus, id tempus erat volutpat at. Integer eu scelerisque neque, ut fermentum
+	  neque.
+	  </p>
+	  <p id="pageNumber">35 We're Dreaming of Bing Crosby</p>
+	  <p id="magazineIssue">Esquire Magazine</p>
+	</div>
+	<hr/>
+	<div>
+	  <p id="line1">FILTHY</p>
+	  <p id="line2">COAL-FIRED POWER PLANTS</p>
+	  <p id="line3">SPEW CARBON INTO THE AIR.</p>
+	  <p id="line4">A MISHMASH OF</p>
+	  <p id="line5">9,200 GENERATORS STREAMS VITAL ELECTRONS ALONG 300,000 MILES OF AGING, INEFFICIENT</p>
+	  <p id="line6">TRANSMISSION LINES.</p>
+	  <p id="line7">AND ONE</p>
+	  <p id="line8">UNTRIMMED TREE IN THE WRONG PLACE COULD PLUNGE A QUARTER OF</p>
+	  <p id="line9">THE COUNTRY</p>
+	  <p id="line10">INTO DARKNESS.</p>
+	  <p id="line11"><span id="electricGrid">THIS IS OUR ELECTRIC GRID.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra cursus orci eget sodales. 
+	  Nulla tempus mollis leo, vel posuere metus feugiat eu. Mauris interdum nunc at arcu cursus, et pharetra quam gravida. 
+	  Phasellus id ipsum quam. Phasellus hendrerit egestas enim, vitae rhoncus erat interdum nec. Fusce eu aliquet justo. In 
+	  fermentum non justo vel ullamcorper. Quisque dignissim euismod nibh. In dolor lacus, congue nec tortor sit amet, rutrum blandit 
+	  erat. Quisque at purus et nibh semper lacinia. Fusce eu blandit risus. In nec ligula mi. Sed imperdiet, mi id luctus tincidunt,
+	  arcu leo varius est, consectetur vestibulum mi velit eget erat. Duis dignissim, tellus eu hendrerit tincidunt, ex lorem ornare
+	  quam, quis pretium neque tellus id lacus. Phasellus lectus libero, luctus dignissim erat sed, pharetra laoreet massa. Nunc 
+	  feugiat vehicula orci at eleifend. Vivamus facilisis ornare sapien, eget facilisis magna viverra sit amet. Sed at erat ac massa 
+	  malesuada sodales. In hac habitasse platea dictumst. Etiam gravida odio et neque euismod, id cursus felis sodales. Sed non 
+	  consectetur ligula, quis pharetra erat. Suspendisse nisi quam, vulputate vel nunc sit amet, finibus viverra justo. Maecenas sed 
+	  augue eget tellus eleifend euismod. Vestibulum quis enim ut nibh tempus vestibulum. Praesent ex neque, vehicula vitae mi sed, 
+	  mattis pulvinar magna. Vestibulum nec mauris vel erat elementum dictum. Morbi suscipit eros tellus, vel tempor risus sollicitudin
+	  sed. Nam quis rhoncus dolor. Curabitur auctor urna at posuere euismod. Proin eget luctus est, id tempor massa. Donec a purus lorem. 
+	  Duis nec dui quis tellus condimentum tincidunt. Duis porttitor egestas sem ac porta. Suspendisse ac pellentesque lorem. Sed 
+	  sapien eros, lacinia quis sem sit amet, ullamcorper porttitor ipsum. Curabitur ullamcorper, lacus commodo varius ultricies, purus 
+	  quam tincidunt ante, non hendrerit dui erat vel tellus. Pellentesque vulputate commodo felis, nec ultricies ipsum eleifend in. 
+	  Vestibulum lobortis accumsan purus, id tempus erat volutpat at. Integer eu scelerisque neque, ut fermentum neque. Sed ut interdum 
+	  sem. Maecenas ut elementum nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce 
+	  pretium volutpat sem aliquet malesuada. Praesent suscipit tortor et tortor dictum dapibus. Duis mi tellus, ultricies ut risus 
+	  pretium, elementum molestie nibh. Vestibulum lobortis accumsan purus, id tempus erat volutpat at. Integer eu scelerisque neque, 
+	  ut fermentum neque. Sed ut interdum sem. Vestibulum lobortis accumsan purus, id tempus erat volutpat at. Integer eu scelerisque neque,
+	  ut fermentum neque. Sed ut interdum sem.</p>
+	  <p id="pageNumber2">79</p> 
+	  <p id="squares">■ ■ ■</p>
+	</div>
+	<hr/>
+	<div>
+	  <p id="coffeeText"><img src="Macchiato_Art.jpg" alt="A Cute Macchiato">Espresso is coffee brewed by forcing a small amount of nearly boiling water under pressure through finely ground coffee beans.
+	  <br/><br/>Espresso is generally thicker than coffee brewed by other methods, has a higher concentration of suspended and dissolved solids, 
+	  and has a crema on top (a form with a creamy consistency).<br/><br/> Tamping down the coffee promotes the water's even penetration of 
+	  the grounds. This process produces an almost syrupy beverage by extracting both solid and dissolved</p>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shinai Sorensen</title>
+	<meta charset="utf-8">
+	<style>
+	  
+	  
+	  @font-face {
+	    font-family: museoFont;
+		src: url(museo_slab_500.otf);
+	  }
+	  @font-face {
+	    font-family: babaFont;
+		src: url(BebasKai.otf);
+	  }
+	  
+	  * {
+	  font-family: "Times New Roman", Arial, Verdana;
+	  font-size: 16px;
+	  width: 90%;
+	  margin: auto;
+	  letter-spacing: normal;
+	  }
+	  
+	  #designHeader {
+	    clear: left;
+	    margin-top: 50px;
+		display: block;
+		padding: 20px;
+	    border-top: 1px solid gray;
+		border-bottom: 1px solid gray;
+		border-left: 1px solid gray;
+		border-right: 2px solid gray;
+	  }
+	  #Hi {
+	    display: block;
+		margin-top: -55px;
+		border-radius: 70%;
+		max-width: 110px;
+		float: left;
+		margin-left: 40px;
+	
+	  }
+	  #companyTitle {
+	    display: block;
+		margin-top: -32px;
+	    margin-left: -610px;
+		width: 100%;
+		padding: 1px;
+        font-size: 35px;
+        font-family: museoFont;
+		text-align: center;
+	  }
+	  #titleLinks1 {
+	    display: block;
+        text-align: center;
+        margin-left: 300px;
+        margin-top: -30px;
+        word-spacing: 20px;		
+	  }
+	  #titleLinks2 {
+	    display: block;
+		text-align: right;
+		margin-top: -18px;
+		margin-left: -180px;
+		word-spacing: 20px;
+	  }
+	  #pageTitle {
+	    margin-left: 105px;
+		margin-top: 75px;
+		font-size: 65px;
+	    font-family: babaFont;
+
+	  }
+	  #companyLocation {
+	    font-family: babaFont;
+		font-size: 33px;
+		margin-left: 350px;
+		margin-top: 15px;
+	  }
+	  #and {
+        vertical-align: middle;
+	    font-family: babaFont;
+		font-size: 35px;
+		margin-top: -15px;
+	  }
+	  #pageLinks {
+	    margin-left: 110px;
+      }
+	  #designLabel {
+	    max-width: 175px;
+		border-radius: 70%;
+		box-sizing: border-box;
+		padding: 25px;
+	  }
+	  #developLabel {
+	    max-width: 175px;
+		border-radius: 70%;
+		box-sizing: border-box;
+		padding: 25px;
+	  }
+	  #supportLabel {
+	    max-width: 175px;
+		border-radius: 70%;
+		box-sizing: border-box;
+		padding: 25px;
+	  }
+	  #hostLabel {
+	    max-width: 175px;
+		border-radius: 70%;
+		box-sizing: border-box;
+		padding: 25px;
+	  }
+	  #imageLinks {
+	    margin-top: 20px;
+		margin-bottom: 20px;
+	  }
+	  #didImage {
+	    max-width: 250px;
+		padding-right: 60px;
+		padding-bottom: 40px;
+	  }
+	  #youImage {
+	    max-width: 250px;
+		padding-right: 25px;
+		padding-bottom: 40px;
+	  }
+	  #knowImage {
+	    margin-left: -40px;
+	    max-width: 250px;
+		padding-right: 60px;
+		padding-bottom: 25px;
+	  }
+	  #thatImage {
+	    max-width: 250px;
+		padding-right: 25px;
+		padding-bottom: 25px;
+	  }
+	  #asideInfo{
+	    margin-left: 545px;
+		margin-top: -420px;
+
+	  }
+	  #iImage {
+	    display: block;
+		margin-left: 50px;
+	    margin-top: 20px;
+	    max-width: 60px;
+		margin-bottom: 30px;
+	  }
+	  #iText {
+	    display: block;
+		font-family: babaFont;
+		font-size: 20px;
+		width: 25%;
+	    margin-top: -86px;
+		margin-left: 120px;
+		margin-bottom: 40px;
+		
+	  }
+	  #likeImage {
+	    display: block;
+		margin-left: 50px;
+	    max-width: 60px;
+		margin-bottom: 20px;
+	  }  
+	  #likeText {
+	    display: block;
+		font-family: babaFont;
+		font-size: 20px;
+		width: 25%;
+		margin-left: 120px;
+		margin-bottom: 40px;
+		margin-top: -85px;
+	  }
+	  #cakeImage {
+	    display: block;
+	    margin-left: 50px;
+	    max-width: 60px;
+		margin-bottom: 30px;
+	  }
+	  #cakeText {
+	    display: block;
+		font-family: babaFont;
+		font-size: 20px;
+		width: 25%;
+		margin-left: 120px;
+		margin-bottom: 0px;
+		margin-top: -85px;
+	  }	
+	  #adText {
+	    display: block;
+	    width: 30%;
+		margin-left: 50px;
+		margin-top: 50px;
+	  }
+	  footer {
+	    float: bottom;
+		position: relative;
+		text-align: center;
+		bottom: -170px;
+	  }
+	  @media screen and (max-width: 1280px) {
+	    #titleLinks1 {
+		  margin-left: 225px;
+		}
+		#titleLinks2 {
+		   margin-left: -100px;
+		}
+		#companyTitle {
+		  width: 120%;
+		}
+		footer {
+		  display: none;
+		}
+	  }
+	  @media screen and (max-width: 800px) {
+	    #designHeader {
+		  width: 110%;
+		}
+		#Hi {
+		  margin-left: 255px;
+		}
+		#titleLinks1 {
+		  float: left;
+		  margin-left: -50px;
+		  margin-top: -63px;
+		}
+		#titleLinks2 {
+		  margin-left: 140px;
+		  margin-top: -18px;
+		}
+		#companyTitle {
+		  margin-left: -10px;
+		  margin-top: 40px;
+		}
+		#pageTitle {
+		  width: 150%;
+		  margin-left: -40px;
+		  margin-top: 10px;
+		}
+		#companyLocation {
+		  margin-left: 210px;
+		}
+		#pageLinks {
+		  margin-left: 45px;
+		  width: 150%;
+		}
+		#designLabel {
+          margin-right: -45px;
+		}
+		#developLabel {
+		  margin-right: -45px;
+		}
+		#supportLabel {
+		  margin-right: -45px;
+		}
+		#hostLabel {
+		  margin-right: -45px;
+		}
+		#imageLinks {
+		  margin-left: 240px;
+		}
+		#youImage {
+		  float: right;
+		  margin-right: -110px;
+		}
+		#knowImage {
+		  margin-left: -25px;
+		  margin-top: 20px;
+		}
+		#thatImage {
+          float: right;
+		  margin-top: 20px;
+		  margin-right: -135px;
+		}
+		#asideInfo {
+		  display: none;
+		}
+	  }
+	  @media screen and (max-width: 400px) {
+	    #designHeader {
+		 width: 110%;
+		}
+		#Hi {
+		  margin-left: 90px;
+		}
+		#companyTitle {
+		  float: left;
+		  width: 100%;
+		  margin-left: 25px;
+		  margin-top: -80px;
+		}
+		#titleLinks1 {
+		  margin-top: 70px;
+		  margin-left: -30px;
+		  word-spacing: 5px;
+		}
+		#titleLinks2 {
+		  word-spacing: 5px;
+		  margin-left: 80px;
+		}
+		#pageTitle {
+		  margin-top: 160px;
+		  margin-left: -23px;
+		  text-align: center;
+		  width: 140%;
+		  font-size: 62px;
+		}
+		#companyLocation {
+		  margin-left: 50px;
+		}
+		#pageLinks {
+		  width: 110%;
+		}
+		#designLabel {
+		  margin-left: -50px;
+		  margin-right: 0px;
+		  margin-bottom: -18px;
+		}
+		#developLabel {
+		  margin-bottom: -18px;
+		}
+		#supportLabel {
+		  margin-left: -50px;
+		  margin-right: 0px;
+		}
+		#imageLinks {
+		  margin-left: 90px;
+		}
+		#didImage {
+		  margin-left: 40px;
+		}
+	    #youImage {
+		  display: none;
+		}
+		#knowImage {
+		  display: none;
+		}
+		#thatImage {
+		  display: none;
+		}
+	  }
+	</style>
+  </head>
+</html>
