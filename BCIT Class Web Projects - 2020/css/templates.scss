@@ -1,0 +1,44 @@
+//     Author: Shinai Sorensen
+//     Date: March 24, 2020
+
+// Define variables
+$red: rgb(177, 64, 64);
+$blue: rgb(85, 85, 161);
+$green: rgb(80, 156, 84);
+
+// Define mix-ins
+
+// Mixin without variables
+@mixin boxStyle {
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+// Mixin with variables
+@mixin shadow($horizontal, $vertical, $color) {
+    text-shadow: $horizontal $vertical $color;
+}
+
+// Demonstration of variables being used
+h2 {
+    color: $red;
+}
+
+thead {
+    color: $blue;
+    background-color: $green;
+}
+
+// Demonstration of mixins being used
+th {
+    @include shadow(10px, 10px, red);
+}
+
+td {
+    @include shadow(5px, 5px, blue);
+}
+
+footer {
+    @include boxStyle;
+}

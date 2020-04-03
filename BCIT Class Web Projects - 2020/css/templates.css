@@ -1,0 +1,22 @@
+h2 {
+  color: #b14040;
+}
+
+thead {
+  color: #5555a1;
+  background-color: #509c54;
+}
+
+th {
+  text-shadow: 10px 10px red;
+}
+
+td {
+  text-shadow: 5px 5px blue;
+}
+
+footer {
+  background-color: lightblue;
+  padding: 10px;
+  border-radius: 20px;
+}

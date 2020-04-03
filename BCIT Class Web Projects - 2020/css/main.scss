@@ -1,0 +1,250 @@
+/*
+    Author: Shinai Sorensen
+    Date: March 28, 2020
+*/
+
+// CSS Reset
+@import url('/students/ssorensen23/css/reset/cssReset.css');
+
+// Import a new font
+@font-face {
+    font-family: pigiarniq;
+    src: url('/students/ssorensen23/fonts/pigiarniq_regular-webfont.woff') format('woff'),
+         url('/students/ssorensen23/fonts/pigiarniq_regular-webfont.woff2') format('woff2');
+}
+
+// Variables
+$gunmetal: #2D3047;
+$pansyPurple: #82204A;
+$blackShadows: #C0A9B0;
+$pinkLace: #F9E5F2;
+$glaucous: #7880B5;
+$soap: #D2D6EF;
+$white: #FFFFFF;
+$black: #000000;
+
+// Body
+body {
+    color: $gunmetal;
+    background-color: $pansyPurple;
+    font-family: pigiarniq;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+// Header
+.header-grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    background-color: $pinkLace;
+    border: 2px solid $gunmetal;
+    margin-bottom: 10px;
+}
+
+header figure {
+    text-align: right;
+}
+
+header figure img {
+    width: 100px;
+    height: auto;
+}
+
+// Flex container to manage nav bar and main content
+.flex-container {
+    display: flex;
+}
+
+// Navigation Bar
+nav {
+    background-color: $pinkLace;
+    border: 2px solid $gunmetal;
+    width: 280px;
+    padding: 10px 5px 10px 5px;
+    position: fixed;
+}
+
+// Navigation Links
+nav ul li {
+    list-style-type: none;
+    padding: 3px 0 3px 0;
+}
+
+nav ul{
+    margin-left: -30px;
+}
+
+nav h2 {
+    margin-left: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px 5px 10px;
+}
+
+nav a:link, nav a:visited {
+    color: $gunmetal;
+}
+
+nav a:hover {
+    color: $white;
+    background-color: $pansyPurple;
+}
+
+nav a:active {
+    color: $soap;
+}
+
+// Main content
+main {
+    background-color: $pinkLace;
+    border: 2px solid $gunmetal;
+    width: 75%;
+    margin-left: 310px;
+    margin-right: auto;
+    padding: 10px 15px 10px 15px;
+}
+
+main h1 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+main section {
+    padding-left: 20px;
+}
+
+main ul {
+    list-style-type: circle;
+}
+
+main section h2 {
+    border: 2px solid $gunmetal;
+    background-color: $soap;
+    padding: 5px 10px 5px 10px;
+    margin-left: -15px;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main a:link, main a:visited {
+    color: $pansyPurple;
+}
+
+main a:hover {
+    color: $glaucous;
+}
+
+main a:active {
+    color: $white;
+}
+
+// Media queries for mobile and other electronic devices
+@media screen and (max-width: 871px) {
+    body {
+        font-size: 0.7em;
+    }
+
+    nav {
+        width: 200px;
+    }
+
+    main {
+        margin-left: 230px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    body {
+        font-size: 0.5em;
+    }
+
+    nav {
+        width: 150px;
+    }
+    nav ul {
+        margin-left: -40px;
+    }
+
+    header figure img {
+        width: 50px;
+        height: auto;
+    }
+
+    main {
+        margin-left: 180px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        font-size: 0.4em;
+    }
+
+    .header-grid-container {
+        margin-left: -50px;
+    }
+
+    nav {
+        width: 120px;
+    }
+
+    main {
+        margin-left: 140px;
+    }
+}
+
+
+// Media query for printing
+@media print {
+    body {
+        background-color: $white;
+        color: $black;
+        font-size: 0.8em;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .header-grid-container {
+        display: none;
+    }
+
+    a[href ^= 'http']:after {
+        content: ' (URL: ' attr(href) ') ';   
+    }
+    
+    a:link, a:visited, a:hover, a:active {
+        color: $black;
+        font-size: 1em;
+        text-decoration: underline;
+    }
+
+    main {
+        border: none;
+        margin-left: 0px;
+        width: 800px;
+    }
+
+    main section h2 {
+        border: none;
+        text-decoration: underline;
+    }
+
+    section {
+        page-break-inside: avoid;
+    }
+}

@@ -35,8 +35,7 @@ body {
 }
 
 a:link, a:visited {
-    /* color: rgb(146, 84, 84); */
-    color: hsl(10, 50%, 50%);
+    color: rgb(146, 84, 84);
 }
 
 a:hover {

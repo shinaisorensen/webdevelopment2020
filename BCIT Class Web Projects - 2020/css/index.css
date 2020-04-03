@@ -28,6 +28,10 @@ a:active {
     text-align: center;
 }
 
+h2 {
+    text-align: center;
+}
+
 /* Navigation bar */
 #navContainer {
     background-color: lightpink;
